@@ -10,7 +10,7 @@ Add the API/appsettings.json file with a configuration similar to the following:
 ```
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Data source=reactivities.db"
+    "DefaultConnection": "Data source=mydb.db"
   },
   "Logging": {
     "LogLevel": {

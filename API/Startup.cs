@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Items;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -41,7 +43,9 @@ namespace API
                     policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
                 });
             });
-
+            
+            services.AddMediatR(typeof(List.Handler).Assembly);
+            
             services.AddControllers();
         }
 
